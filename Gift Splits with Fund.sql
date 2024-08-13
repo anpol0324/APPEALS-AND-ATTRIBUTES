@@ -1,0 +1,4 @@
+SELECT *
+FROM GiftSplit
+WHERE FundId IS NOT NULL AND FundId != ''
+ORDER BY GiftId;

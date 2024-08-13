@@ -1,0 +1,32 @@
+SELECT
+   C.[CAMPAIGN_ID],
+ C. NOTES,
+ C. DATEADDED,
+ C.[DEFAULT_FUND],
+ F.[FUND_ID],
+  F. NOTES,
+ C. DEFAULT_APPEAL,
+ A. APPEAL_ID,
+ A. NOTES
+
+
+
+
+FROM
+ [dbo].[CAMPAIGN] AS C
+LEFT JOIN
+ [dbo].[Fund] AS F
+ON
+ C.[DEFAULT_FUND] = F.[ID]
+
+
+
+
+LEFT JOIN
+  [dbo]. [APPEAL] AS A
+ON
+  C.[DEFAULT_APPEAL] = A.[ID]
+
+
+ORDER BY
+ C. CAMPAIGN_ID
